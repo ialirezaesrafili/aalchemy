@@ -1,0 +1,42 @@
+{
+  "name": "aalchemy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ialirezaesrafili/aalchemy.git",
+  "author": "Alireza Esrafili <alirezaesrafili53@gmail.com>",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --watch",
+    "test": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.2",
+    "@typescript-eslint/parser": "^8.59.2",
+    "eslint": "^10.3.0",
+    "prettier": "^3.8.3",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "object-hash": "^3.0.0",
+    "ora": "^9.4.0",
+    "pg": "^8.20.0",
+    "pino": "^10.3.1"
+  }
+}
